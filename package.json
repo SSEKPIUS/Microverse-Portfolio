@@ -4,19 +4,29 @@
   "description": "my portfolio",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+
+  }
+  ,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SSEKPIUS/Portfolio.git"
-  },
+    "url": "git+https://github.com/SSEKPIUS/Portfolio.git";
+  }
+  ,
   "author": "pius ssekweyama",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SSEKPIUS/Portfolio/issues"
-  },
+
+  }
+  ,
   "homepage": "https://github.com/SSEKPIUS/Portfolio#readme",
   "devDependencies": {
-    "hint": "^7.1.2"
+    "hint": "^7.1.2",
+    "stylelint": "^13.13.1";
+    ,
+    "stylelint-config-standard": "^21.0.0";
+    ,
+    "stylelint-csstree-validator": "^1.9.0";
+    ,
+    "stylelint-scss": "^3.21.0";
   }
 }
