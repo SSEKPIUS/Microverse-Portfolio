@@ -2,7 +2,7 @@
 
 # Project Name
 
-> Portfolio.
+> Portfolio mobile setup.
 
 
 ## Built With
