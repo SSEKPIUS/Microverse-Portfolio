@@ -42,7 +42,6 @@ body {
   list-style: none;
   display: flex;
   text-transform: capitalize;
-
   /* font-family: 'Inter'; */
   font-style: normal;
   line-height: 20px;
@@ -161,6 +160,10 @@ body {
     flex-direction: column;
     align-items: flex-start;
     background-image: url("img/bg3.jpg");
+    height: auto;
+  }
+  .headline-section .primary-text {
+    font-size: 62px;
   }
 
   .headline-section .social-icons {
