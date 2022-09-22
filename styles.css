@@ -1,3 +1,146 @@
+html{
+  box-sizing: border-box;
+}
+*, *:before, *:after{
+  box-sizing: inherit;
+}
 body {
-  font-family: 'Tangerine', serif;
+  font-family: 'sora', serif;
+  background: #FFFFFF;
+  color: #000000;
+  margin: 0;
+}
+.main{
+ display: flex;
+ flex-direction: column;
+}
+.wrapper{
+  max-width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/*top navigation*/
+.top-navigation{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%; 
+  height: auto;
+  background: #3E3C3C;
+  color: #FFFFFF;
+}
+.top-navigation ul{
+  list-style: none;
+  display: flex;
+  text-transform: capitalize;
+  font-family: 'Inter';
+  font-style: normal;
+  line-height: 20px;
+}
+.top-navigation li{
+  padding: 4px;
+  flex: 1;
+}
+.top-navigation .name{
+  font-weight: 700;
+  font-size: 20px;
+  flex: 9;
+  display: flex;
+}
+.top-navigation .name i{
+  margin-right: 0;
+  margin-left: auto;
+}
+.top-navigation li{
+  font-weight: 600;
+  font-size: 15px;
+  flex: 1;
+}
+
+/*headline section*/
+.headline-section{
+  background: #1C1A19;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+  background-image: url("img/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headline-section .social-icons {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 10%;
+}
+.headline-section .social-icons i {
+  margin: 10px 10px;
+}
+.headline-section .blank{
+  flex-basis: 50%;
+}
+.headline-section .headline{
+  margin: 20px 10px;
+}
+.headline-section .primary-text{
+  font-family: 'Crete Round';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 82px;
+  color: #F55800;
+}
+.headline-section .support-text{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  padding: 10px 0;
+}
+.headline-section .description{
+  padding: 10px 0;
+}
+
+@media all and (max-width:1000px){
+  /*top navigation*/
+  .top-navigation ul{
+    flex-wrap: wrap ;
+  }
+  .top-navigation .name{
+    flex-basis: 100%;
+  }
+  .top-navigation li{
+    flex: 1 1 50%;
+  }
+
+  /*headline section*/
+  .headline-section .blank{
+    flex-basis: 0%;
+  }
+
+}
+
+@media all and (max-width:500px){
+  /*top navigation*/
+  .top-navigation{
+    position: relative;
+  }
+  .top-navigation ul{
+    flex-direction: column;
+  }
+
+  /*headline section*/
+  .headline-section{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .headline-section .social-icons{
+    order: 2;
+    flex-direction: row;
+  }
 }
