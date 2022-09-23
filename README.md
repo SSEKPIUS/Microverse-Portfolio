@@ -25,8 +25,20 @@
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+Set-up GitHub Actions
+1. create a .github/workflows folder and add a copy of .github/workflows/linters.yml (https://github.com/microverseinc/linters-config/blob/master/html-css/.github/workflows/linters.yml) to that folder.
 
 ### Setup
+Set-up linters in your local env
+1. you need to initialize npm to create package.json file.  npm init -y
+2. Run npm install --save-dev hint@7.x
+3. Copy .hintrc (https://github.com/microverseinc/linters-config/blob/master/html-css/.hintrc) to the root directory of your project.
+
+Stylelint
+A mighty, modern linter that helps you avoid errors and enforce conventions in your styles.
+1. Run 
+npm install --save-dev stylelint@13.x stylelint-scss@3.x stylelint-config-standard@21.x stylelint-csstree-validator@1.x
+2. Copy .stylelintrc.json (https://github.com/microverseinc/linters-config/blob/master/html-css/.stylelintrc.json) to the root directory of your project.
 
 ### Install
 
@@ -34,11 +46,17 @@ To get a local copy up and running follow these simple example steps.
 
 ### Run tests
 
+1. Run npx hint .
+2. Fix validation errors.
+3. Run npx stylelint "**/*.{css,scss}" on the root of your directory of your project.
+4. Fix linter errors.
+
 ### Deployment
 
 
 
 ## Authors
+1. Ssekweyama Pius
 
 👤 **Author1**
 
