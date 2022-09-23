@@ -93,18 +93,11 @@ header {
   padding: 10px 10px;
 }
 
-.headline-section .illustration-header {
+.headline-section {
   background-image: url("img/Illustration-header@2x.png");
   background-repeat: no-repeat;
-  background-size: cover;
-
-  /* background-position: right; */
-  position: absolute;
-  width: 810.13px;
-  height: 1001.27px;
-  left: 1244.68px;
-  top: 187px;
-  transform: matrix(0.96, -0.27, 0.27, 0.96, 0, 0);
+  background-size: contain;
+  background-position: right;
 }
 
 .headline-section .social-icons {
@@ -153,6 +146,7 @@ header {
   line-height: 32px;
   padding: 10px 0;
   color: #f4f5f7;
+  width: 70%;
 }
 
 @media all and (max-width: 1000px) {
@@ -186,6 +180,12 @@ header {
     position: relative;
   }
 
+  .top-navigation .name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
   .top-navigation ul {
     flex-direction: column;
     padding: 0;
@@ -201,6 +201,9 @@ header {
 
   /* headline section */
   .headline-section {
+    background-image: url("img/illustration-header-mobile.png");
+    background-size: auto;
+    background-position-y: bottom;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -212,7 +215,21 @@ header {
   }
 
   .headline-section .primary-text {
-    font-size: 62px;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: 0.37px;
+  }
+
+  .headline-section .support-text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .headline-section .description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   .headline-section .social-icons {
