@@ -46,6 +46,7 @@ header {
   list-style: none;
   display: flex;
   text-transform: capitalize;
+
   /* font-family: 'Inter'; */
   font-style: normal;
   line-height: 20px;
@@ -61,7 +62,7 @@ header {
 .top-navigation .name {
   flex: 9;
   display: flex;
-  font-family: 'Inter';
+  font-family: 'Inter'; /* stylelint-disable-line */
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
@@ -95,6 +96,7 @@ header {
   background-image: url("img/Illustration-header@2x.png");
   background-repeat: no-repeat;
   background-size: cover;
+
   /* background-position: right; */
   position: absolute;
   width: 810.13px;
@@ -108,7 +110,7 @@ header {
   display: flex;
   flex-direction: column;
   flex-basis: 10%;
-  color: #CFCFCF;
+  color: #cfcfcf;
 }
 
 .headline-section .social-icons i {
@@ -124,7 +126,7 @@ header {
 }
 
 .headline-section .primary-text {
-  font-family: 'Crete Round';
+  font-family: 'Crete Round';/* stylelint-disable-line */
   font-style: normal;
   font-weight: 400;
   font-size: 72px;
@@ -133,23 +135,23 @@ header {
 }
 
 .headline-section .support-text {
-  font-family: 'Inter';
+  font-family: 'Inter';/* stylelint-disable-line */
   font-style: normal;
   font-weight: 500;
   font-size: 32px;
   line-height: 44px;
   padding: 10px 0;
-  color: #FFFFFF;
+  color: #fff;
 }
 
 .headline-section .description {
-  font-family: 'Inter';
+  font-family: 'Inter';/* stylelint-disable-line */
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 32px;
   padding: 10px 0;
-  color: #F4F5F7;
+  color: #f4f5f7;
 }
 
 @media all and (max-width: 1000px) {
@@ -172,8 +174,8 @@ header {
   }
 
   .headline-section .illustration-header {
-      left: 442.68px;
-      top: 253px;
+    left: 442.68px;
+    top: 253px;
   }
 }
 
@@ -204,8 +206,8 @@ header {
   }
 
   .headline-section .illustration-header {
-      left: 131.68px;
-      top: 265px;
+    left: 131.68px;
+    top: 265px;
   }
 
   .headline-section .primary-text {
