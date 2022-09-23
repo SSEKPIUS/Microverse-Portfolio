@@ -91,9 +91,6 @@ header {
   display: flex;
   align-items: center;
   padding: 10px 10px;
-}
-
-.headline-section {
   background-image: url("img/Illustration-header@2x.png");
   background-repeat: no-repeat;
   background-size: contain;
