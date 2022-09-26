@@ -130,7 +130,7 @@ header {
   font-family: 'Crete Round'; /* stylelint-disable-line */
   font-style: normal;
   font-weight: 400;
-  font-size: 72px;
+  font-size: 50px;
   line-height: 82px;
   color: #f55800;
 }
@@ -169,11 +169,11 @@ header {
   margin: 2em 0;
 }
 
-.works .title h1 {
+.works .title h2 {
   font-family: 'Crete Round'; /* stylelint-disable-line */
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 52px;
   flex: 1;
   flex-basis: 20%;
@@ -416,7 +416,7 @@ header {
 }
 
 .base .skill {
-  padding: 60px 0;
+  padding: 20px 0;
   display: flex;
   color: #fff;
   text-align: center;
@@ -426,15 +426,18 @@ header {
   flex-basis: 33.333%;
 }
 
+.base .skill > div {
+  margin-top: 10px;
+}
+
 .base .skill h3 {
   font-family: 'Inter'; /* stylelint-disable-line */
   font-style: normal;
   font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
+  font-size: 25px;
+  line-height: 10px;
   display: flex;
-  align-items: baseline;
-  text-align: center;
+  justify-content: center;
 }
 
 .base .skill > div h3 span {
@@ -463,7 +466,7 @@ header {
   font-family: 'Inter'; /* stylelint-disable-line */
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 10px;
   line-height: 43px;
   color: #fff;
 }
@@ -650,9 +653,9 @@ select {
     margin: 2em 0;
   }
 
-  .works .title h1 {
+  .works .title h2 {
     font-weight: 400;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 52px;
     text-align: left;
   }
@@ -675,8 +678,8 @@ select {
     justify-content: center;
   }
 
-  .works .card-works .card-right h2 {
-    font-size: 32px;
+  .works .card-works .card-right h3 {
+    font-size: 25px;
     line-height: 44px;
   }
 
@@ -705,8 +708,8 @@ select {
 
   .base .about .primary-text {
     font-weight: 400;
-    font-size: 72px;
-    line-height: 88px;
+    font-size: 45px;
+    line-height: 10px;
     letter-spacing: 0.37px;
   }
 
@@ -722,7 +725,7 @@ select {
   .base .skill > div ul {
     font-weight: 400;
     font-size: 22px;
-    line-height: 43px;
+    line-height: 35px;
     text-align: center;
     color: #fff;
     margin: 0;
@@ -745,7 +748,7 @@ select {
 
   .bottom .contact div:first-child {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 25px;
     line-height: 44px;
     padding: 35px 0;
   }
