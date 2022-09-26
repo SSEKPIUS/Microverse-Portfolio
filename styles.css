@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Inter:wght@400;500&family=Poppins&family=Roboto:wght@700&display=swap');
 /* stylelint-disable  no-descending-specificity */
 html {
   box-sizing: border-box;
@@ -418,13 +419,14 @@ header {
   padding: 60px 0;
   display: flex;
   color: #fff;
+  text-align: center;
 }
 
 .base .skill div {
   flex-basis: 33.333%;
 }
 
-.base .skill h2 {
+.base .skill h3 {
   font-family: 'Inter'; /* stylelint-disable-line */
   font-style: normal;
   font-weight: 700;
@@ -432,25 +434,26 @@ header {
   line-height: 44px;
   display: flex;
   align-items: baseline;
+  text-align: center;
 }
 
-.base .skill > div h2 span {
+.base .skill > div h3 span {
   margin-right: 10px;
   background: #f55800;
 }
 
-.base .skill > div:first-child h2 span {
+.base .skill > div:first-child h3 span {
   width: 20px;
   height: 20px;
   transform: rotate(-45deg);
 }
 
-.base .skill > div:nth-child(2) h2 span {
+.base .skill > div:nth-child(2) h3 span {
   width: 20px;
   height: 20px;
 }
 
-.base .skill > div:nth-child(3) h2 span {
+.base .skill > div:nth-child(3) h3 span {
   width: 20px;
   height: 20px;
   border-radius: 100%;
