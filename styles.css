@@ -224,7 +224,7 @@ header {
   color: #091e42;
 }
 
-.works .card-works .card-right > div {
+.works .card-works .card-right > div ul {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -232,7 +232,7 @@ header {
   gap: 12px;
 }
 
-.works .card-works .card-right > div p {
+.works .card-works .card-right > div li {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
