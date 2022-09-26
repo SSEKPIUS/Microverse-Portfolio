@@ -302,7 +302,7 @@ header {
   margin: 5px 20px;
 }
 
-.works .card-works li .prj-01 .tags {
+.works .card-works li .prj-01 .tags ul{
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -311,7 +311,7 @@ header {
   margin: 5px 20px;
 }
 
-.works .card-works li .prj-01 .tags p {
+.works .card-works li .prj-01 .tags li {
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
