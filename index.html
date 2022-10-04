@@ -228,7 +228,8 @@ don’t hestiate to contact me.
         </div>
       </section>
 
-      <section class="bottom">
+      <section>
+        <footer class="bottom">
         <div class="wrapper">
           <div class="contact">
             <div>
@@ -237,10 +238,18 @@ don’t hestiate to contact me.
               </span>
             </div>
             <div>
-              <form action="">
-                <input type="text" id="fname" name="fname" placeholder="Full name">
-                <input type="text" id="email" name="email" placeholder="Email address">
-                <textarea name="" id="" cols="10" rows="5" placeholder="Enter text here"></textarea>
+              <form action="https://formspree.io/f/xqkjbgbd"  method="post">
+                <ul>
+                  <li>
+                    <input type="text" id="fname" name="fname" placeholder="Full name" maxlength="30" required>
+                  </li>
+                  <li>
+                    <input type="email" id="email" name="email" placeholder="Email address" required>
+                  </li>
+                  <li>
+                    <textarea name="" id="" cols="10" rows="5" placeholder="Enter text here" maxlength="500" required></textarea>
+                  </li>
+                </ul>
                 <input type="submit" value="Get in touch">
               </form> 
             </div>
@@ -253,6 +262,7 @@ don’t hestiate to contact me.
             <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
             <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
           </div>
+        </footer>
       </section>
     </div>
 </body>
