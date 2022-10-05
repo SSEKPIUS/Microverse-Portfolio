@@ -215,6 +215,7 @@ header {
   line-height: 52px;
   flex: 1;
   flex-basis: 20%;
+  white-space: nowrap;
 }
 
 .works .title span {
@@ -245,11 +246,11 @@ header {
   padding-left: 30px;
 }
 
-.works .card-works .card-right h2 {
+.works .card-works .card-right h3 {
   font-family: 'Crete Round'; /* stylelint-disable-line */
   font-style: normal;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 52px;
   color: #091e42;
 }
