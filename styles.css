@@ -326,8 +326,6 @@ header {
 }
 
 .works .card-works li .prj-01 {
-  /* background-image: url("img/ImgPlaceholder2.png");
-  background-repeat: no-repeat; */
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -410,19 +408,6 @@ header {
   height: 48px;
   margin-top: 16px;
 }
-
-/* .base .about .about-top .action span {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 24px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #fff;
-} */
 
 .base .about .about-bottom {
   flex-basis: 50%;
