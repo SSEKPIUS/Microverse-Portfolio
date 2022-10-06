@@ -385,7 +385,7 @@ header {
 /* Base */
 .base {
   width: 100%;
-  background: #262626;
+  background: #1c1a19;
   margin: 50px 0;
 }
 
@@ -394,6 +394,7 @@ header {
   display: flex;
   border-bottom: 1px solid #fff;
   margin-bottom: 70px;
+  margin-left: 5%;
 }
 
 .base .about .about-top {
@@ -407,7 +408,7 @@ header {
   margin: 10px 0;
   width: 161px;
   height: 48px;
-  margin-top: 56px;
+  margin-top: 16px;
 }
 
 /* .base .about .about-top .action span {
@@ -429,12 +430,13 @@ header {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+  background-position-x: 195px;
 }
 
 .base .about .primary-text {
   font-family: 'Crete Round'; /* stylelint-disable-line */
   font-style: normal;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 72px;
   line-height: 82px;
   color: #f55800;
@@ -467,11 +469,13 @@ header {
 .base .skill h3 {
   font-family: 'Inter'; /* stylelint-disable-line */
   font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
+  font-weight: 900;
+  font-size: 35px;
   line-height: 10px;
   display: flex;
   align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .base .skill > div h3 span {
@@ -500,7 +504,7 @@ header {
   font-family: 'Inter'; /* stylelint-disable-line */
   font-style: normal;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 22px;
   line-height: 43px;
   color: #fff;
   padding: 0;
@@ -508,6 +512,8 @@ header {
 
 .base .skill > div li {
   list-style: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .bottom .contact {
@@ -530,7 +536,7 @@ header {
   line-height: 52px;
   color: #262626;
   text-align: start;
-  padding: 2em 3em;
+  padding: 2em 3em 2em 0;
 }
 
 .bottom .contact form {
@@ -738,28 +744,38 @@ select {
 
   /* Base */
   .base .about {
-    flex-direction: column;
+    display: block;
   }
 
   .base .about .about-top,
   .base .about .about-bottom {
-    flex-basis: 100%;
+    width: 100%;
   }
+
+  .base .about .about-bottom {
+    height: 200px;
+    margin-bottom: -50px;
+  }
+
 
   .base .skill {
     flex-direction: column;
+    text-align: center;
+  }
+
+  .base .skill h3 {
+    justify-content: center;
   }
 
   .base .about .primary-text {
-    font-weight: 400;
-    font-size: 45px;
+    font-weight: 900;
+    font-size: 62px;
     line-height: 10px;
     letter-spacing: 0.37px;
   }
 
   .base .about .description {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 17px;
   }
 
   .base .skill div {
@@ -767,11 +783,7 @@ select {
   }
 
   .base .skill > div ul {
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 35px;
     text-align: center;
-    color: #fff;
     margin: 0;
     padding: 0;
   }
