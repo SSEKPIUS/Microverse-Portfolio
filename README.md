@@ -62,7 +62,7 @@ Feel free to check the [issues page](../../issues/).
 Give a ⭐️ if you like this project!
 
 ## Acknowledgments
-- Big thantk to Microverse and all the student teams that contributed in any form
+- Big thanks to Microverse and all the student teams that contributed in any form
 
 ## 📝 License
 This project is [MIT](./LICENSE) licensed.
