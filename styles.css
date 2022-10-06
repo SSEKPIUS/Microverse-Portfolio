@@ -629,7 +629,7 @@ select {
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 768px) {
   .grid-container {
     display: inline-block;
   }
