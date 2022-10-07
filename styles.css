@@ -30,6 +30,10 @@ body {
   padding: 0;
 }
 
+input:hover {
+  transform: translate(10px, 0);
+}
+
 input[type=submit] {
   border: none;
   font-family: 'Inter'; /* stylelint-disable-line */
@@ -242,6 +246,10 @@ header {
   padding: 5px;
 }
 
+.works .card-works .card-left img:hover {
+  transform: scale(0.98);
+}
+
 .works .card-works .card-right {
   flex-basis: 40%;
   padding-left: 30px;
@@ -301,6 +309,10 @@ header {
 .works .card-works li div {
   height: 435px;
   filter: drop-shadow(0 48px 48px rgba(37, 47, 137, 0.08));
+}
+
+.works .card-works li .prj-01:hover {
+  transform: scale(0.98);
 }
 
 .works .card-works li:first-child .prj-01 {
