@@ -246,7 +246,9 @@ header {
   padding: 5px;
 }
 
-
+.works .card-works .card-left img:hover {
+  transform: scale(0.98);
+}
 
 .works .card-works .card-right {
   flex-basis: 40%;
