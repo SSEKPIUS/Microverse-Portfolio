@@ -134,12 +134,12 @@ header {
   margin-left: auto;
 }
 
-.mobile-menu {
-  display: none;
-}
-
 .menu {
   display: block;
+}
+
+.mobile-menu {
+  display: none;
 }
 
 /* headline section */
