@@ -2,6 +2,7 @@
 /* stylelint-disable  no-descending-specificity */
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -106,6 +107,11 @@ header {
   line-height: 20px;
 }
 
+.top-navigation ul a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .top-navigation li {
   padding: 4px;
   flex: 1;
@@ -132,7 +138,7 @@ header {
   display: none;
 }
 
-.desktop-menu {
+.menu {
   display: block;
 }
 
@@ -632,10 +638,6 @@ select {
   }
 
   /* top navigation */
-  .top-navigation {
-    position: relative;
-  }
-
   .top-navigation .name {
     font-weight: 700;
     font-size: 18px;
@@ -651,7 +653,7 @@ select {
     display: block;
   }
 
-  .desktop-menu {
+  .menu {
     display: none;
   }
 
