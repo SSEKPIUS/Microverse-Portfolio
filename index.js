@@ -7,6 +7,9 @@ function toggleMenu() {
   menusArray.forEach((element) => {
     element.classList.toggle('menu');
   });
+  document.querySelector('.top-navigation .name span').classList.toggle('menu');
+  document.querySelector('.top-navigation .name .fa-bars').classList.toggle('menu');
+  document.querySelector('.top-navigation .name .fa-times').classList.toggle('menu');
 }
 // Hide menu on Click
 menusArray.forEach((element) => {

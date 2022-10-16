@@ -649,11 +649,17 @@ select {
     padding: 0;
   }
 
+  .top-navigation ul li.toggle {
+    margin-top: 5px;
+    border-bottom: #6f6c6b 1px solid;
+  }
+
   .mobile-menu {
     display: block;
   }
 
-  .menu {
+  .menu,
+  .social.toggle {
     display: none;
   }
 
