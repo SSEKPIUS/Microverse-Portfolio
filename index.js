@@ -95,7 +95,7 @@ let modalContent = { // launch projects modal
   header: '',
   technologies: [],
   description: '',
-
+  img: '',
 };
 
 document.querySelector('.modal-content i').addEventListener('click', (event) => {
@@ -104,6 +104,7 @@ document.querySelector('.modal-content i').addEventListener('click', (event) => 
     header: '',
     technologies: [],
     description: '',
+    img: '',
 
   };
   document.querySelector('.modal').classList.toggle('hide');
@@ -114,9 +115,11 @@ function launchProject(id) {
     modalContent.header = projects[id].name;
     modalContent.technologies = projects[id].technologies;
     modalContent.description = projects[id].description;
+    modalContent.img = projects[id].image;
 
     document.querySelector('.modal').classList.toggle('hide');
     document.querySelector('.modal-content h2').innerText = modalContent.header;
+    document.querySelector('.modal-content-body > div:first-child').style.setProperty('background-image', `url("${modalContent.img}")`);
     let ulContent = '';
     modalContent.technologies.forEach((item) => {
       ulContent += `<li><span>${item}</span></li>`;
