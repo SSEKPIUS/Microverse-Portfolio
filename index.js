@@ -10,6 +10,7 @@ function toggleMenu() {
   document.querySelector('.top-navigation .name span').classList.toggle('menu');
   document.querySelector('.top-navigation .name .fa-bars').classList.toggle('menu');
   document.querySelector('.top-navigation .name .fa-times').classList.toggle('menu');
+  document.querySelector('.top-navigation').classList.toggle('fullHeight');
 }
 // Hide menu on Click
 menusArray.forEach((element) => {

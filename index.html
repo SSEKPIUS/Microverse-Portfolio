@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css" class="src">
-    <script src="index.js"></script>
+    <script defer src="index.js"></script>
     <title>Ssekweyama Pius Porfolio</title>
 </head>
 <body>
@@ -16,11 +16,15 @@
           <div class="wrapper">
             <nav>
               <ul>
-                <li class="name"><span>pius ssekweyama</span><i class="fa fa-bars mobile-menu" aria-hidden="true"></i></li>
-                <li class="desktop-menu">portfolio</li>
-                <li class="desktop-menu">about</li>
-                <li class="desktop-menu">contact</li>
-                <li class="social desktop-menu">
+                <li class="name">
+                  <span>pius ssekweyama</span>
+                  <i class="fa fa-bars mobile-menu" onclick="toggleMenu()" aria-hidden="true"></i>
+                  <i class="fa fa-times mobile-menu menu" onclick="toggleMenu()" aria-hidden="true"></i>
+                </li>
+                <li class="toggle menu"><a href="#portfolio">portfolio</a></li>
+                <li class="toggle menu"><a href="#about">about</a></li>
+                <li class="toggle menu"><a href="#contact">contact</a></li>
+                <li class="social toggle menu">
                   <i class="fa fa-envelope" aria-hidden="true"></i>
                 </li>
               </ul>
@@ -29,7 +33,7 @@
         </div>
       </header>
 
-      <section class="headline-section">
+      <section class="headline-section" id="portfolio">
         <div class="illustration-header"></div>
         <div class="social-icons">
           <i class="fa fa-github fa-lg" aria-hidden="true"></i>
@@ -153,7 +157,7 @@ don’t hestiate to contact me.
         </div>
       </section>
 
-      <section class="base">
+      <section class="base" id="about">
           <div class="about">
             <div class="about-top">
               <h2 class="primary-text">About me</h2>
@@ -195,7 +199,7 @@ don’t hestiate to contact me.
         </div>
       </section>
 
-      <section>
+      <section id="contact">
         <footer class="bottom">
         <div class="wrapper">
           <div class="contact">
