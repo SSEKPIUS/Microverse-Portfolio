@@ -632,7 +632,7 @@ select {
   width: 80%;
   background: #fff;
   border: 1px solid #ebecf0;
-  box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08);
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -646,12 +646,12 @@ select {
 }
 
 .modal-content > div:first-child h2 {
-  font-family: 'Crete Round';
+  font-family: 'Crete Round';/* stylelint-disable-line */
   font-style: normal;
   font-weight: 400;
   font-size: 32px;
   line-height: 44px;
-  color: #172B4D;
+  color: #172b4d;
   margin: 0;
   width: 100%;
 }
@@ -670,14 +670,14 @@ select {
 }
 
 .modal-content > div ul li {
-  font-family: 'Poppins';
+  font-family: 'Poppins';/* stylelint-disable-line */
   font-style: normal;
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
-  color: #3C3A39;
+  color: #3c3a39;
   border: 1px solid #4d4f55;
-  box-shadow: 0px 48px 48px rgba(37, 47, 137, 0.08);
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
   padding: 10px;
   margin-right: 10px;
   white-space: nowrap;
@@ -706,9 +706,9 @@ select {
 }
 
 .modal-content-buttons {
- display: flex;
- margin-top: auto;
- margin-bottom: 0;
+  display: flex;
+  margin-top: auto;
+  margin-bottom: 0;
 }
 
 .modal-content-buttons input[type=submit] {
@@ -726,14 +726,12 @@ select {
   right: 0;
 }
 
-
 .icon {
   padding: 10px;
   color: white;
   min-width: 50px;
   text-align: center;
 }
-
 
 @media all and (max-width: 768px) {
   .grid-container {
