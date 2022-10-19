@@ -1,8 +1,82 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
-// Toggle menu on Humberger Button click
-const menus = document.querySelectorAll('.toggle');
+const menus = document.querySelectorAll('.toggle');// Toggle menu on Humberger Button click
 const menusArray = Array.from(menus);
+
+const projects = [// projects
+  {
+    name: 'Multi-Post Stories',
+    description: `A daily selection of privately personalized reads; no
+    accounts or sign-ups required. has been the industry's
+    standard dummy text ever since the 1500s, when an unknown
+    printer took a standard dummy text.`,
+    image: 'img/ImgPlaceholder.png',
+    technologies: ['html', 'bootstrap', 'ruby'],
+    link_live: '#',
+    link_source: '#',
+  },
+  {
+    name: 'Data Dashboard Healthcare',
+    description: `A daily selection of privately
+    personalized reads; no accounts or sign-ups required. has
+    been the industry's standard`,
+    image: 'img/ImgPlaceholder2.png',
+    technologies: ['html', 'bootstrap', 'ruby'],
+    link_live: '#',
+    link_source: '#',
+  },
+  {
+    name: 'Website Protfolio',
+    description: `A daily selection of privately
+    personalized reads; no accounts or sign-ups required. has
+    been the industry's standard`,
+    image: 'img/ImgPlaceholder3.png',
+    technologies: ['html', 'bootstrap', 'ruby'],
+    link_live: '#',
+    link_source: '#',
+  },
+  {
+    name: 'Profesional Art Printing Data More',
+    description: `A daily selection of privately
+    personalized reads; no accounts or sign-ups required. has
+    been the industry's standard`,
+    image: 'img/ImgPlaceholder4.png',
+    technologies: ['html', 'bootstrap', 'ruby'],
+    link_live: '#',
+    link_source: '#',
+  },
+  {
+    name: 'Data Dashboard Healthcare',
+    description: `A daily selection of privately
+    personalized reads; no accounts or sign-ups required. has
+    been the industry's standard`,
+    image: 'img/ImgPlaceholder2.png',
+    technologies: ['html', 'bootstrap', 'ruby'],
+    link_live: '#',
+    link_source: '#',
+  },
+  {
+    name: 'Website Protfolio',
+    description: `supporting-text">A daily selection of privately
+    personalized reads; no accounts or sign-ups required. has
+    been the industry's standard`,
+    image: 'img/ImgPlaceholder3.png',
+    technologies: ['html', 'bootstrap', 'ruby'],
+    link_live: '#',
+    link_source: '#',
+  },
+  {
+    name: 'Profesional Art Printing Data More',
+    description: `A daily selection of privately
+    personalized reads; no accounts or sign-ups required. has
+    been the industry's standard`,
+    image: 'img/ImgPlaceholder4.png',
+    technologies: ['html', 'bootstrap', 'ruby'],
+    link_live: '#',
+    link_source: '#',
+  },
+];
+
 function toggleMenu() {
   menusArray.forEach((element) => {
     element.classList.toggle('menu');
@@ -12,9 +86,146 @@ function toggleMenu() {
   document.querySelector('.top-navigation .name .fa-times').classList.toggle('menu');
   document.querySelector('.top-navigation').classList.toggle('fullHeight');
 }
-// Hide menu on Click
-menusArray.forEach((element) => {
+
+menusArray.forEach((element) => { // Hide menu on Click
   element.addEventListener('click', () => {
     toggleMenu();
   });
 });
+
+let modalContent = { // launch projects modal
+  header: '',
+  technologies: [],
+  description: '',
+  img: '',
+};
+
+document.querySelector('.modal-content i').addEventListener('click', (event) => {
+  event.preventDefault();
+  modalContent = {
+    header: '',
+    technologies: [],
+    description: '',
+    img: '',
+
+  };
+  document.querySelector('.modal').classList.toggle('hide');
+});
+
+function launchProject(id) {
+  if (id >= 0) {
+    modalContent.header = projects[id].name;
+    modalContent.technologies = projects[id].technologies;
+    modalContent.description = projects[id].description;
+    modalContent.img = projects[id].image;
+
+    document.querySelector('.modal').classList.toggle('hide');
+    document.querySelector('.modal-content h2').innerText = modalContent.header;
+    document.querySelector('.modal-content-body > div:first-child').style.setProperty('background-image', `url("${modalContent.img}")`);
+    let ulContent = '';
+    modalContent.technologies.forEach((item) => {
+      ulContent += `<li><span>${item}</span></li>`;
+    });
+    const ul = document.querySelector('.modal-content ul');
+    ul.innerHTML = ulContent;
+    document.querySelector('.modal-content-body p').innerText = modalContent.description;
+  }
+}
+
+const container = document.querySelector('#content');// load projects
+
+const ulTiles = document.createElement('ul');
+ulTiles.classList.add('grid-container');
+
+projects.forEach((project, index, projectArray) => {
+  if (index === 0) {
+    const img = document.createElement('img');
+    img.src = project.image;
+    img.alt = 'Image placeholder';
+    const cardLeft = document.createElement('div');
+    cardLeft.classList.add('card-left');
+    cardLeft.appendChild(img);
+
+    const h3 = document.createElement('h3');
+    h3.innerText = 'Multi-Post Stories';
+    const p = document.createElement('p');
+    p.innerText = `A daily selection of privately personalized reads; no
+     accounts or sign-ups required. has been the industry's
+     standard dummy text ever since the 1500s, when an unknown
+     printer took a standard dummy text.`;
+    const ul = document.createElement('ul');
+    project.technologies.forEach((tec, index, arr) => {
+      const li = document.createElement('li');
+      li.innerText = tec;
+      ul.appendChild(li);
+    });
+    const dv = document.createElement('div');
+    dv.appendChild(ul);
+
+    const input = document.createElement('input');
+    input.type = 'submit';
+    input.value = 'See Project';
+    input.addEventListener('click', () => launchProject(0));
+
+    const cardRight = document.createElement('div');
+    cardRight.classList.add('card-right');
+    cardRight.appendChild(h3);
+    cardRight.appendChild(p);
+    cardRight.appendChild(dv);
+    cardRight.appendChild(input);
+
+    const cardWorks = document.createElement('div');
+    cardWorks.classList.add('card-works');
+    cardWorks.appendChild(cardLeft);
+    cardWorks.appendChild(cardRight);
+
+    container.appendChild(cardWorks);
+  } else {
+    const span1 = document.createElement('span');
+    span1.classList.add('title-post');
+    span1.innerText = project.name;
+
+    const span2 = document.createElement('span');
+    span2.classList.add('supporting-text');
+    span2.innerText = project.description;
+
+    const ul = document.createElement('ul');
+    project.technologies.forEach((tec, index, arr) => {
+      const li = document.createElement('li');
+      li.innerText = tec;
+      ul.appendChild(li);
+    });
+    const span3 = document.createElement('span');
+    span3.classList.add('tags');
+    span3.appendChild(ul);
+
+    const input = document.createElement('input');
+    input.type = 'submit';
+    input.value = 'See Project';
+    input.addEventListener('click', () => launchProject(index));
+
+    const dv = document.createElement('div');
+    dv.classList.add('prj-01');
+    dv.appendChild(span1);
+    dv.appendChild(span2);
+    dv.appendChild(span3);
+    dv.appendChild(input);
+    dv.style.setProperty('background-image', `url("${project.image}")`);
+
+    const li = document.createElement('li');
+    li.appendChild(dv);
+    li.addEventListener('mouseover', (event) => {
+      li.querySelector('input[type=submit]').style.setProperty('display', 'flex');
+    });
+    li.addEventListener('mouseout', (event) => {
+      li.querySelector('input[type=submit]').style.setProperty('display', 'none');
+    });
+
+    ulTiles.appendChild(li);
+  }
+});
+
+const cardWorksTiles = document.createElement('div');
+cardWorksTiles.classList.add('card-works');
+cardWorksTiles.appendChild(ulTiles);
+container.appendChild(cardWorksTiles);

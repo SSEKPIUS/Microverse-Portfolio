@@ -32,7 +32,7 @@ body {
 }
 
 input:hover {
-  transform: translate(10px, 0);
+  transform: translate(5px, 5px);
 }
 
 input[type=submit] {
@@ -138,7 +138,8 @@ header {
   display: block;
 }
 
-.mobile-menu {
+.mobile-menu,
+.hide {
   display: none;
 }
 
@@ -322,13 +323,12 @@ header {
 }
 
 .works .card-works li:first-child .prj-01 {
-  background-image: url("img/ImgPlaceholder1.png");
   background-repeat: no-repeat;
 }
 
 .works .card-works li:nth-child(2) .prj-01,
 .works .card-works li:nth-child(5) .prj-01 {
-  background-image: url("img/ImgPlaceholder2.png");
+  /* background-image: url("img/ImgPlaceholder2.png"); */
   background-repeat: no-repeat;
 }
 
@@ -392,10 +392,10 @@ header {
 .works .card-works li .prj-01 input[type=submit] {
   height: 58px;
   justify-self: flex-end;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 /* Base */
@@ -607,6 +607,132 @@ select {
   margin: 20px 5px;
 }
 
+/* Modal */
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  background-color: rgba(184, 174, 174, 0.8);
+}
+
+.modal > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 80%;
+  background: #fff;
+  border: 1px solid #ebecf0;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.modal-content > div:first-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.modal-content > div:first-child h2 {
+  font-family: 'Crete Round';/* stylelint-disable-line */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+  margin: 0;
+  width: 100%;
+}
+
+.modal-content > div:first-child i {
+  cursor: pointer;
+}
+
+.modal-content > div ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+.modal-content > div ul li {
+  font-family: 'Poppins';/* stylelint-disable-line */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  color: #3c3a39;
+  border: 1px solid #4d4f55;
+  box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+  padding: 10px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.modal-content-body {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.modal-content-body > div:first-child {
+  flex-basis: 60%;
+  background-image: url('./img/SnapshootPortfolio.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.modal-content-body > div:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  height: 100%;
+  padding-left: 20px;
+  min-height: 40vh;
+}
+
+.modal-content-buttons {
+  display: flex;
+  margin-top: auto;
+  margin-bottom: 0;
+}
+
+.modal-content-buttons input[type=submit] {
+  padding: 10px 45px 10px 10px;
+}
+
+.modal-content-buttons .input-icons {
+  width: min-content;
+  position: relative;
+  margin-right: 20px;
+}
+
+.modal-content-buttons .input-icons i {
+  position: absolute;
+  right: 0;
+}
+
+.icon {
+  padding: 10px;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
 @media all and (max-width: 768px) {
   .grid-container {
     display: inline-block;
@@ -733,6 +859,10 @@ select {
     line-height: 24px;
   }
 
+  .works .card-works li .prj-01 input[type=submit] {
+    display: flex !important;
+  }
+
   .grid-container li {
     margin: 10px 0;
   }
@@ -818,5 +948,33 @@ select {
     width: 50%;
     align-self: center;
     margin: auto;
+  }
+
+  /* Modal */
+  .modal-content {
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+  }
+
+  .modal-content > div ul {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  .modal-content-body {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .modal-content-body > div:first-child {
+    height: 450px;
+    min-height: 20vh;
+  }
+
+  .modal-content-body > div:nth-child(2) {
+    flex-basis: 100%;
+    padding-left: 2px;
+    min-height: auto;
   }
 }
