@@ -822,4 +822,33 @@ select {
     align-self: center;
     margin: auto;
   }
+
+  /* Modal */
+  .modal-content {
+    width: 90%;
+    height: 90%;
+    padding: 10px;
+  }
+
+  .modal-content > div ul {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+
+  .modal-content-body {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .modal-content-body > div:first-child {
+    height: 450px;
+    min-height: 20vh;
+  }
+
+  .modal-content-body > div:nth-child(2) {
+    flex-basis: 100%;
+    padding-left: 2px;
+    min-height: auto;
+  }
+
 }
