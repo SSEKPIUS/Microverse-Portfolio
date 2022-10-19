@@ -32,7 +32,7 @@ body {
 }
 
 input:hover {
-  transform: translate(10px, 0);
+  transform: translate(5px, 5px);
 }
 
 input[type=submit] {
@@ -392,10 +392,10 @@ header {
 .works .card-works li .prj-01 input[type=submit] {
   height: 58px;
   justify-self: flex-end;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  display: none;
 }
 
 /* Base */
@@ -857,6 +857,10 @@ select {
   .works .card-works .card-right > p {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  .works .card-works li .prj-01 input[type=submit] {
+    display: flex !important;
   }
 
   .grid-container li {

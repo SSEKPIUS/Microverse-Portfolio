@@ -16,14 +16,6 @@ const projects = [// projects
     link_source: '#',
   },
   {
-    name: '',
-    description: '',
-    image: 'img/ImgPlaceholder1.png',
-    technologies: [],
-    link_live: '#',
-    link_source: '#',
-  },
-  {
     name: 'Data Dashboard Healthcare',
     description: `A daily selection of privately
     personalized reads; no accounts or sign-ups required. has
@@ -69,6 +61,16 @@ const projects = [// projects
     personalized reads; no accounts or sign-ups required. has
     been the industry's standard`,
     image: 'img/ImgPlaceholder3.png',
+    technologies: ['html', 'bootstrap', 'ruby'],
+    link_live: '#',
+    link_source: '#',
+  },
+  {
+    name: 'Profesional Art Printing Data More',
+    description: `A daily selection of privately
+    personalized reads; no accounts or sign-ups required. has
+    been the industry's standard`,
+    image: 'img/ImgPlaceholder4.png',
     technologies: ['html', 'bootstrap', 'ruby'],
     link_live: '#',
     link_source: '#',
@@ -178,21 +180,6 @@ projects.forEach((project, index, projectArray) => {
     cardWorks.appendChild(cardRight);
 
     container.appendChild(cardWorks);
-  } else if (index === 1) {
-    const input = document.createElement('input');
-    input.type = 'submit';
-    input.value = 'See Project';
-    input.addEventListener('click', () => launchProject(1));
-
-    const dv = document.createElement('div');
-    dv.classList.add('prj-01');
-    dv.appendChild(input);
-    dv.style.setProperty('background-image', `url("${project.image}")`);
-
-    const li = document.createElement('li');
-    li.appendChild(dv);
-
-    ulTiles.appendChild(li);
   } else {
     const span1 = document.createElement('span');
     span1.classList.add('title-post');
@@ -212,15 +199,27 @@ projects.forEach((project, index, projectArray) => {
     span3.classList.add('tags');
     span3.appendChild(ul);
 
+    const input = document.createElement('input');
+    input.type = 'submit';
+    input.value = 'See Project';
+    input.addEventListener('click', () => launchProject(index));
+
     const dv = document.createElement('div');
     dv.classList.add('prj-01');
     dv.appendChild(span1);
     dv.appendChild(span2);
     dv.appendChild(span3);
+    dv.appendChild(input);
     dv.style.setProperty('background-image', `url("${project.image}")`);
 
     const li = document.createElement('li');
     li.appendChild(dv);
+    li.addEventListener('mouseover', (event) => {
+      li.querySelector('input[type=submit]').style.setProperty('display', 'flex');
+    });
+    li.addEventListener('mouseout', (event) => {
+      li.querySelector('input[type=submit]').style.setProperty('display', 'none');
+    });
 
     ulTiles.appendChild(li);
   }
