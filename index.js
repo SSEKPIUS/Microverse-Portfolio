@@ -232,9 +232,9 @@ cardWorksTiles.appendChild(ulTiles);
 container.appendChild(cardWorksTiles);
 
 // form validation
-const forms = document.querySelector('form');
-const emails = document.querySelector('#email');
-const errors = document.querySelector('.errors');
+const form = document.querySelector('form');
+const email = document.querySelector('#email');
+const error = document.querySelector('.errors');
 
 function showError() {
   error.style.setProperty('display', 'block');
