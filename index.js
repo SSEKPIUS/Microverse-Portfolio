@@ -229,3 +229,22 @@ const cardWorksTiles = document.createElement('div');
 cardWorksTiles.classList.add('card-works');
 cardWorksTiles.appendChild(ulTiles);
 container.appendChild(cardWorksTiles);
+
+// form validation
+const form = document.querySelector('form');
+const email = document.querySelector('#email');
+const error = document.querySelector('.errors');
+
+form.addEventListener('submit', (event) => {
+  // eslint-disable-next-line quotes, no-useless-escape
+  const pattern = "[a-z0-9-]+@[a-z0-9-]+\.[a-z0-9-.]+";
+  const mail = email.value;
+  if (mail.match(pattern)[0] !== mail) {
+    error.querySelector('span').textContent = 'Entered value needs to be an e-mail address in lower case';
+    error.style.setProperty('display', 'block');
+    event.preventDefault();
+  } else {
+    error.querySelector('span').textContent = '';
+    error.style.setProperty('display', 'none');
+  }
+});

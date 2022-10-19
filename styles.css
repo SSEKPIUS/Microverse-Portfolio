@@ -591,6 +591,16 @@ select {
   width: 100%;
 }
 
+.bottom .contact form .errors {
+  width: 100%;
+  background-color: rgb(177 125 125 / 20%);
+  margin: 10px 2px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: red;
+  display: none;
+}
+
 .bottom .social {
   width: 100%;
   border-top: #e5e5e5 solid 1px;
