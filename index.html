@@ -172,11 +172,14 @@
                     </li>
                     <li>
                       <input type="email" id="email" name="email"
-                        placeholder="Email address" required>
+                        placeholder="Email address" pattern="[a-z0-9-]+@[a-z0-9-]+\.[a-z0-9-.]+" required>
                     </li>
                     <li>
                       <textarea name="textarea" id="textarea" rows="10"
                         placeholder="Enter text here" maxlength="500" required></textarea>
+                    </li>
+                    <li class="errors">
+                      <span></span>
                     </li>
                   </ul>
                   <input type="submit" value="Get in touch">

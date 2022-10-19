@@ -230,3 +230,35 @@ const cardWorksTiles = document.createElement('div');
 cardWorksTiles.classList.add('card-works');
 cardWorksTiles.appendChild(ulTiles);
 container.appendChild(cardWorksTiles);
+
+// form validation
+const form = document.querySelector('form');
+const email = document.querySelector('#email');
+const error = document.querySelector('.errors');
+
+function showError() {
+  error.style.setProperty('display', 'block');
+  if (email.validity.badInput) error.querySelector('span').textContent = 'Bad Input for the Email Feild.';
+  else if (email.validity.patternMismatch) error.querySelector('span').textContent = 'Entered value needs to be an e-mail address in lowercase characters.';
+  else if (email.validity.rangeOverflow) error.querySelector('span').textContent = 'Entered value is too long for an e-mail address.';
+  else if (email.validity.rangeUnderflow) error.querySelector('span').textContent = 'Entered value is too short for an e-mail address.';
+  else if (email.validity.stepMismatch) error.querySelector('span').textContent = 'Entered value is incorrect for an e-mail address.';
+  else if (email.validity.typeMismatch) error.querySelector('span').textContent = 'Entered value type is incorrect for an e-mail address.';
+  else if (email.validity.valueMissing) error.querySelector('span').textContent = 'Email field enpty';
+}
+
+email.addEventListener('input', (event) => {
+  if (email.validity.valid) {
+    error.querySelector('span').textContent = '';
+    error.style.setProperty('display', 'none');
+  } else {
+    showError();
+  }
+});
+
+form.addEventListener('submit', (event) => {
+  if (!email.validity.valid) {
+    showError();
+    event.preventDefault();
+  }
+});
