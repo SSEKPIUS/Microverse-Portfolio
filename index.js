@@ -1,3 +1,4 @@
+/* eslint-disable no-multi-assign */
 /* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
 const menus = document.querySelectorAll('.toggle');// Toggle menu on Humberger Button click
@@ -238,7 +239,8 @@ const lastName = document.querySelector('#last_name');
 const email = document.querySelector('#email');
 const textarea = document.querySelector('#textarea');
 const error = document.querySelector('.errors');
-const formData = {
+// eslint-disable-next-line prefer-const
+let formData = {
   firstName: '',
   lastName: '',
   email: '',
@@ -261,10 +263,10 @@ form.addEventListener('submit', (event) => {
 // Intiate local storage for form data
 if (localStorage.getItem('form')) {
   const data = JSON.parse(localStorage.getItem('form'));
-  firstName.value = data.firstName;
-  lastName.value = data.firstName;
-  email.value = data.email;
-  textarea.value = data.textarea;
+  formData.firstName = firstName.value = data.firstName;
+  formData.lastName = lastName.value = data.lastName;
+  formData.email = email.value = data.email;
+  formData.textarea = textarea.value = data.textarea;
 }
 // Save form data to local storage
 firstName.addEventListener('input', (event) => {
