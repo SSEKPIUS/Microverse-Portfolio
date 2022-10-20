@@ -1,3 +1,4 @@
+/* eslint-disable no-multi-assign */
 /* eslint-disable linebreak-style */
 /* eslint-disable no-unused-vars */
 const menus = document.querySelectorAll('.toggle');// Toggle menu on Humberger Button click
@@ -232,8 +233,18 @@ container.appendChild(cardWorksTiles);
 
 // form validation
 const form = document.querySelector('form');
+const firstName = document.querySelector('#first_name');
+const lastName = document.querySelector('#last_name');
 const email = document.querySelector('#email');
+const textarea = document.querySelector('#textarea');
 const error = document.querySelector('.errors');
+// eslint-disable-next-line prefer-const
+let formData = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  textarea: '',
+};
 
 form.addEventListener('submit', (event) => {
   // eslint-disable-next-line quotes, no-useless-escape
@@ -247,4 +258,32 @@ form.addEventListener('submit', (event) => {
     error.querySelector('span').textContent = '';
     error.style.setProperty('display', 'none');
   }
+});
+// Intiate local storage for form data
+if (localStorage.getItem('form')) {
+  const data = JSON.parse(localStorage.getItem('form'));
+  formData.firstName = firstName.value = data.firstName;
+  formData.lastName = lastName.value = data.lastName;
+  formData.email = email.value = data.email;
+  formData.textarea = textarea.value = data.textarea;
+}
+// Save form data to local storage
+firstName.addEventListener('input', (event) => {
+  formData.firstName = firstName.value;
+  localStorage.setItem('form', JSON.stringify(formData));
+});
+
+lastName.addEventListener('input', (event) => {
+  formData.lastName = lastName.value;
+  localStorage.setItem('form', JSON.stringify(formData));
+});
+
+email.addEventListener('input', (event) => {
+  formData.email = email.value;
+  localStorage.setItem('form', JSON.stringify(formData));
+});
+
+textarea.addEventListener('input', (event) => {
+  formData.textarea = textarea.value;
+  localStorage.setItem('form', JSON.stringify(formData));
 });
