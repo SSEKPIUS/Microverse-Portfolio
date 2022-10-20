@@ -258,7 +258,7 @@ form.addEventListener('submit', (event) => {
     error.style.setProperty('display', 'none');
   }
 });
-
+// Intiate local storage for form data
 if (localStorage.getItem('form')) {
   const data = JSON.parse(localStorage.getItem('form'));
   firstName.value = data.firstName;
@@ -266,19 +266,22 @@ if (localStorage.getItem('form')) {
   email.value = data.email;
   textarea.value = data.textarea;
 }
-
+// Save form data to local storage
 firstName.addEventListener('input', (event) => {
   formData.firstName = firstName.value;
   localStorage.setItem('form', JSON.stringify(formData));
 });
+
 lastName.addEventListener('input', (event) => {
   formData.lastName = lastName.value;
   localStorage.setItem('form', JSON.stringify(formData));
 });
+
 email.addEventListener('input', (event) => {
   formData.email = email.value;
   localStorage.setItem('form', JSON.stringify(formData));
 });
+
 textarea.addEventListener('input', (event) => {
   formData.textarea = textarea.value;
   localStorage.setItem('form', JSON.stringify(formData));
