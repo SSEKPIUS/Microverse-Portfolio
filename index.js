@@ -233,8 +233,17 @@ container.appendChild(cardWorksTiles);
 
 // form validation
 const form = document.querySelector('form');
+const firstName = document.querySelector('#first_name');
+const lastName = document.querySelector('#last_name');
 const email = document.querySelector('#email');
+const textarea = document.querySelector('#textarea');
 const error = document.querySelector('.errors');
+const formData = {
+  firstName: '',
+  lastName: '',
+  email: '',
+  textarea: '',
+};
 
 form.addEventListener('submit', (event) => {
   // eslint-disable-next-line quotes, no-useless-escape
@@ -248,4 +257,29 @@ form.addEventListener('submit', (event) => {
     error.querySelector('span').textContent = '';
     error.style.setProperty('display', 'none');
   }
+});
+
+if (localStorage.getItem('form')) {
+  const data = JSON.parse(localStorage.getItem('form'));
+  firstName.value = data.firstName;
+  lastName.value = data.firstName;
+  email.value = data.email;
+  textarea.value = data.textarea;
+}
+
+firstName.addEventListener('input', (event) => {
+  formData.firstName = firstName.value;
+  localStorage.setItem('form', JSON.stringify(formData));
+});
+lastName.addEventListener('input', (event) => {
+  formData.lastName = lastName.value;
+  localStorage.setItem('form', JSON.stringify(formData));
+});
+email.addEventListener('input', (event) => {
+  formData.email = email.value;
+  localStorage.setItem('form', JSON.stringify(formData));
+});
+textarea.addEventListener('input', (event) => {
+  formData.textarea = textarea.value;
+  localStorage.setItem('form', JSON.stringify(formData));
 });
