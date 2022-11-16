@@ -6,15 +6,12 @@ const menusArray = Array.from(menus);
 
 const projects = [// projects
   {
-    name: 'Multi-Post Stories',
-    description: `A daily selection of privately personalized reads; no
-    accounts or sign-ups required. has been the industry's
-    standard dummy text ever since the 1500s, when an unknown
-    printer took a standard dummy text.`,
+    name: 'To-do list',
+    description: `"To-do list" is a tool that helps to organize your day. It simply lists the things that you need to do and allows you to mark them as complete. I will build a simple website that allows for doing that, and I will do it using ES6 and Webpack!`,
     image: 'img/ImgPlaceholder.png',
-    technologies: ['html', 'bootstrap', 'ruby'],
-    link_live: '#',
-    link_source: '#',
+    technologies: ['html', 'css', 'javascript'],
+    link_live: 'https://ssekpius.github.io/Microverse-ToDo-list/dist/',
+    link_source: 'https://github.com/SSEKPIUS/Microverse-ToDo-list',
   },
   {
     name: 'Data Dashboard Healthcare',
