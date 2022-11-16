@@ -145,7 +145,7 @@ projects.forEach((project, index, projectArray) => {
     cardLeft.appendChild(img);
 
     const h3 = document.createElement('h3');
-    h3.innerText = 'Multi-Post Stories';
+    h3.innerText =  project.name;
     const p = document.createElement('p');
     p.innerText = `A daily selection of privately personalized reads; no
      accounts or sign-ups required. has been the industry's
